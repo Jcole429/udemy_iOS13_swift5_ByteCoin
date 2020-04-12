@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
     
+    let coinManager = CoinManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
