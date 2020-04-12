@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         currencyPicker.dataSource = self
+        currencyPicker.delegate = self
     }
 }
 
@@ -34,7 +35,14 @@ extension ViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return coinManager.currencyArray.count
     }
-    
-    
 }
 
+//MARK: - UIPickerViewDelegate
+
+extension ViewController: UIPickerViewDelegate {
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return coinManager.currencyArray[row]
+    }
+    
+}
