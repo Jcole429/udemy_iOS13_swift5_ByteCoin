@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     }
 }
 
+//MARK: - UIPickerViewDataSource
+
 extension ViewController: UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
