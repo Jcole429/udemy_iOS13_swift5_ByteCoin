@@ -99,6 +99,7 @@
                         <outlet property="bitcoinLabel" destination="Ocx-jo-FtC" id="iLm-9x-xHd"/>
                         <outlet property="currencyLabel" destination="MAn-y0-nXv" id="O0L-RW-oXj"/>
                         <outlet property="currencyPicker" destination="ct2-jk-pgH" id="jLl-yG-zAf"/>
+                        <outlet property="valueLabel" destination="N2a-Ax-iRV" id="ZGh-W3-odY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
