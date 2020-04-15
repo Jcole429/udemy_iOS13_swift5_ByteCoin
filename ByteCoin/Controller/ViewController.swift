@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bitcoinLabel: UIStackView!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
+    @IBOutlet weak var valueLabel: UILabel!
     
     var coinManager = CoinManager()
     
@@ -56,7 +57,9 @@ extension ViewController: UIPickerViewDelegate {
 
 extension ViewController: CoinManagerDelegate {
     func didUpdate(_ coinManager: CoinManager, coin: CoinModel) {
-        print(coin.rate)
+        DispatchQueue.main.async {
+            self.valueLabel.text = String.init(format: "%.2f", coin.rate)
+        }
     }
     
     func didFailWithError(error: Error) {
